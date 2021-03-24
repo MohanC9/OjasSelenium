@@ -5,12 +5,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import org.apache.commons.math3.analysis.function.Add;
 import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ById;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,12 +18,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DataDrivenFM {
-	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException, InterruptedException {
 		
 		
 		
-		File file = new File("C:\\Users\\mc21191\\Downloads\\Book1.xlsx");
+		File file = new File("C:\\Users\\mc21191\\git\\repository\\SeleniumProject\\Document\\Book1.xlsx");
 		
 		FileInputStream fileinput= new FileInputStream(file);
 		
@@ -32,7 +30,7 @@ public class DataDrivenFM {
 		
 		XSSFSheet sheet = wb.getSheetAt(0);
 		
-		//XSSFRow row = sheet.getRow(1);
+		XSSFRow row = sheet.getRow(1);
 		
 		//XSSFCell cell = row.getCell(3);
 		
@@ -42,7 +40,7 @@ public class DataDrivenFM {
 		
 		int rowcount = sheet.getLastRowNum()- sheet.getFirstRowNum();
 		
-		/*for (int i = 0; i<=rowcount; i++) {
+	/*	for (int i = 0; i<=rowcount; i++) {
 			int cellcount = sheet.getRow(i).getLastCellNum();
 			System.out.println("Row No of "+i+" Data of --");
 			
@@ -61,36 +59,37 @@ public class DataDrivenFM {
 		driver.get("https://demoqa.com/automation-practice-form");
 		
 		WebElement Name = driver.findElement(By.id("firstName"));
-		Name.sendKeys("tydrtdyt");
+		//Name.sendKeys("tydrtdyt");
 		WebElement LastName = driver.findElement(By.id("lastName"));
-		LastName.sendKeys("jdhgwuigd");
+		//LastName.sendKeys("jdhgwuigd");
 		WebElement MailId = driver.findElement(By.id("userEmail"));
-		MailId.sendKeys("gjhsh@gmail.com");
-		driver.findElement(By.xpath("//label[contains(text(),'Male')]")).click();;
+		//MailId.sendKeys("gjhsh@gmail.com");
+		WebElement Gender= driver.findElement(By.xpath("//label[contains(text(),'Male')]"));
+		Gender.click();
 		WebElement MobileNo = driver.findElement(By.id("userNumber"));
-		MobileNo.sendKeys("8411444566");
+		//MobileNo.sendKeys("8411444566");
 		WebElement Address = driver.findElement(By.id("currentAddress"));
-		Address.sendKeys("las vegas");
+		//Address.sendKeys("las vegas");
 		WebElement Submit = driver.findElement(By.xpath("/html/body/div/div/div/div[2]/div[2]/div[1]/form/div[11]/div/button"));
-		Submit.submit();
+		//Submit.submit();
 		
-		WebElement ConfirmationMsg = driver.findElement(By.id("example-modal-sizes-title-lg"));
+		/*WebElement ConfirmationMsg = driver.findElement(By.id("example-modal-sizes-title-lg"));
 		
-		//XSSFCell cell = sheet.getRow(i).createCell(6);
+		XSSFCell cell = sheet.getRow(i).createCell(6);
 		
 		if (ConfirmationMsg.isDisplayed()) {
 			 
 			System.out.println("PASS");
 		}
 		else {System.out.println("FAIL");
-	}
+	}*/
 	
-		/*for(int i =0; i<=rowcount; i++) {
+		for(int i =1; i<=rowcount; i++) {
 			Name.sendKeys(sheet.getRow(i).getCell(0).getStringCellValue());
 			LastName.sendKeys(sheet.getRow(i).getCell(1).getStringCellValue());
 			MailId.sendKeys(sheet.getRow(i).getCell(2).getStringCellValue());
-			Gender.sendKeys(sheet.getRow(i).getCell(3).getStringCellValue());
-			MobileNo.sendKeys(sheet.getRow(i).getCell(4).getStringCellValue());
+			//Gender.sendKeys(sheet.getRow(i).getCell(3).getStringCellValue());
+			MobileNo.sendKeys(sheet.getRow(i).getCell(4).getRawValue());
 			Address.sendKeys(sheet.getRow(i).getCell(5).getStringCellValue());
 			
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -106,16 +105,18 @@ public class DataDrivenFM {
 			if (ConfirmationMsg.isDisplayed()) {
 				 
 				cell.setCellValue("PASS");
+				System.out.println("PASS");
 			}
 			else {cell.setCellValue("FAIL");
+			System.out.println("FAIL");
 		}
 		
 	
-			FileOutputStream outputfile = new FileOutputStream("C:\\Users\\mc21191\\Downloads\\Book1.xlsx");
+			FileOutputStream outputfile = new FileOutputStream("C:\\Users\\mc21191\\git\\repository\\SeleniumProject\\Document\\Book1.xlsx");
 			wb.write(outputfile);
 	
 	
-	}*/
+	}
 		
 		//driver.findElement(By.id("closeLargeModal")).submit();
 		
