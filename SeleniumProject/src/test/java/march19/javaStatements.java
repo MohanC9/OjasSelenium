@@ -9,7 +9,7 @@ public class javaStatements {
 	public static void main(String[] args) {
 		
 		int i =10;
-		String month ;
+		String month ; 
 		switch (i) {
 		case 1 : month = "1 - January";
 		break;
