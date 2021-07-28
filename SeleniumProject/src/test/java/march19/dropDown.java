@@ -33,7 +33,7 @@ public class dropDown {
 		
 		Select drpdwn = new Select(driver1.findElement(By.id("fruits")));
 		drpdwn.selectByIndex(1);
-	/*	Wait wait = new FluentWait<WebDriver>(driver1)
+	/* Wait wait = new FluentWait<WebDriver>(driver1)
 			.withTimeout(Duration.ofSeconds(5));
 			.pollingEvery(Duration.ofSeconds(2));
 			.CloseIgnoringInputStream(Exception.class);*/
