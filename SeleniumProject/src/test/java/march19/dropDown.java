@@ -40,10 +40,15 @@ public class dropDown {
 		
 		//drpdwn.deselectAll();
 		//System.out.println(drpdwn);
+		
+		String lrt = "http://demo.guru99.com/test/newtours/register.php";
+		
+		
+		//WebDriver.Options.addCookie(null);
 		driver1.close();
 		driver1.quit();
 		
-		driver.close();
+		//driver.close();
 		driver.quit();
 		
 		

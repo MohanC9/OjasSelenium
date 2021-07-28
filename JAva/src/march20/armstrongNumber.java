@@ -3,7 +3,7 @@ package march20;
 public class armstrongNumber {
 	public static void main(String[] args) {
 		
-		int Num = 1634,rem,ResNum =0;
+		int Num = 512,rem,ResNum =0;
 		int num1 = Num;
 		while(Num>0) {
 			
