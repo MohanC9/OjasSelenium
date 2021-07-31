@@ -43,7 +43,7 @@ public class dropDown {
 		
 		String lrt = "http://demo.guru99.com/test/newtours/register.php";
 		
-		driver.findElement(By.linkText("ADD TO CART")).click();
+		//driver.findElement(By.linkText("ADD TO CART")).click();
 		//WebDriver.Options.addCookie(null);
 		driver1.close();
 		driver1.quit();
