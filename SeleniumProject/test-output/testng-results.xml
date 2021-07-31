@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-31T10:27:37 IST" name="Default suite" finished-at="2021-07-31T10:27:37 IST" duration-ms="79">
+    <groups>
+    </groups>
+    <test started-at="2021-07-31T10:27:37 IST" name="Default test" finished-at="2021-07-31T10:27:37 IST" duration-ms="79">
+      <class name="com.testNG.PracticeTestNG">
+        <test-method signature="First()[pri:0, instance:com.testNG.PracticeTestNG@636be97c]" started-at="2021-07-31T10:27:37 IST" name="First" finished-at="2021-07-31T10:27:37 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- First -->
+        <test-method signature="Second()[pri:0, instance:com.testNG.PracticeTestNG@636be97c]" started-at="2021-07-31T10:27:37 IST" name="Second" finished-at="2021-07-31T10:27:37 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Second -->
+        <test-method signature="Third()[pri:0, instance:com.testNG.PracticeTestNG@636be97c]" started-at="2021-07-31T10:27:37 IST" name="Third" finished-at="2021-07-31T10:27:37 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Third -->
+      </class> <!-- com.testNG.PracticeTestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
